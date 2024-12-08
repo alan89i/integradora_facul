@@ -5,6 +5,12 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  transition: transform 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.App-logo:hover {
+  transform: scale(1.2);
+  height: 45vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -29,10 +35,15 @@
 }
 
 @keyframes App-logo-spin {
-  from {
+  0% {
     transform: rotate(0deg);
+    filter: hue-rotate(0deg);
   }
-  to {
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
     transform: rotate(360deg);
+    filter: hue-rotate(360deg);
   }
 }
